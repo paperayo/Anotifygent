@@ -1,0 +1,47 @@
+{
+	"your app name": {
+		"notify_auth": {
+			"notify_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+			"notify_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+		},
+		"sms": {
+			"agent": "alidayu",
+			"agent_auth": {
+				"appkey": "xxxxxxxx",
+				"appsecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"url": "https://eco.taobao.com/router/rest"
+			},
+			"scenarios": {
+				"register": {
+					"sms_type": "normal",
+					"sms_free_sign_name": "xxxx",
+					"sms_param": {"verification_code": ""},
+					"sms_template_code": "xxxxxxxx"
+				},
+				"retrievepwd": {
+					"sms_type": "normal",
+					"sms_free_sign_name": "",
+					"sms_param": {},
+					"sms_template_code": ""
+				}
+			},
+			"mailer":{
+				"service": "QQ",
+				"from":"Anotifygent Server <xxxxxxxxx@qq.com>",
+				"user": "xxxxxxxxx@qq.com",
+				"password": "your password"
+			},
+			"alarm": {
+				"emails": [
+					"xxxxxxxxx@qq.com"
+				]
+			}
+		},
+		"email": {
+
+		}
+	},
+	"AIWeb": {
+		
+	}
+}
