@@ -53,17 +53,19 @@ var sendsms = function(sms_params, application, callback) {
 					} else {
 						console.log(error);
 						// inform admin the error message
-						var mail_data = {
-							"subject": "!!! SMS Server Error",
-							"text": JSON.stringify(error)
-						};
-						mailer.sendAlarm(application, mail_data, function(mail_err, info){
-							if (mail_err) {
-								console.log(mail_err);
-							} else {
-								console.log("Message sent: " + info.response);
-							}
-						});
+						if (!appConfig[application]["sms"]["alarm"]["emails"].length) {
+							var mail_data = {
+								"subject": "!!! SMS Server Error",
+								"text": JSON.stringify(error)
+							};
+							mailer.sendAlarm(application, mail_data, function(mail_err, info){
+								if (mail_err) {
+									console.log(mail_err);
+								} else {
+									console.log("Message sent: " + info.response);
+								}
+							});
+						}
 						send_err.err_code = 100;
 						send_err.err_message = "sms server error.";
 
