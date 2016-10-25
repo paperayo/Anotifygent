@@ -83,7 +83,21 @@ emails in `emails` list will be notified when agents go wrong.
 `sudo npm start`
 
 ## Docker
-
-
+- **daocloud repository**  
+[click here](https://hub.daocloud.io/repos/da8d743c-ff63-4be2-b60d-22cdc18d510c)
+- **docker-compose.yml**
+```yaml
+anotifygent:
+  image: daocloud.io/patientayo/anotifygent:v1.0.0
+  environment:
+    - 'CONFIG=./conf/config.json'  #internal environment
+  volumes:
+    - './conf:/usr/src/app/conf'  #put your config.json into [current directory]/conf/
+  ports:
+    - '127.0.0.1:<your host port>:80'
+  restart: always
+```
+- **start container**  
+`docker-compose up`
 ## License
 MIT
