@@ -1,47 +1,41 @@
 {
-	"your app name": {
-		"notify_auth": {
-			"notify_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-			"notify_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-		},
-		"sms": {
+	"notify_auth": {
+		"access_key": "xxxx",
+		"access_secret": "xxxx"
+	},
+	"sms": {
+		"venders": [{
+			"id": 1,
+			"belongTo": "",
 			"agent": "alidayu",
-			"agent_auth": {
-				"appkey": "xxxxxxxx",
-				"appsecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"url": "https://eco.taobao.com/router/rest"
-			},
-			"scenarios": {
-				"register": {
-					"sms_type": "normal",
-					"sms_free_sign_name": "xxxx",
-					"sms_param": {"verification_code": ""},
-					"sms_template_code": "xxxxxxxx"
-				},
-				"retrievepwd": {
-					"sms_type": "normal",
-					"sms_free_sign_name": "",
-					"sms_param": {},
-					"sms_template_code": ""
-				}
-			},
-			"mailer":{
-				"service": "QQ",
-				"from":"Anotifygent Server <xxxxxxxxx@qq.com>",
-				"user": "xxxxxxxxx@qq.com",
-				"password": "your password"
-			},
-			"alarm": {
-				"emails": [
-					"xxxxxxxxx@qq.com"
-				]
-			}
+			"appkey": "",
+			"appsecret": "",
+			"url": "",
+			"options":""
+		}],
+		"templates": [{
+			"id": 1,
+			"vender_id": 1,
+			"sms_type": "",
+			"sms_free_sign_name": "",
+			"sms_template_code": "",
+			"sms_param": "",
+			"extend": "",
+			"options":""
+		}],
+		"mailer":{
+			"service": "QQ",
+			"from":"AIHome Sms Server <xxxx@qq.com>",
+			"user": "xxxx@qq.com",
+			"password": "your password"
 		},
-		"email": {
-
+		"alarm": {
+			"emails": [
+				"xxxx@qq.com"
+			]
 		}
 	},
-	"AIWeb": {
-		
+	"email": {
+
 	}
 }
