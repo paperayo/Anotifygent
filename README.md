@@ -72,7 +72,7 @@ edit <a href="#config.example.json">config.example.json</a> and copy as config.j
 - **docker-compose.yml**
 ```yaml
 anotifygent:
-  image: daocloud.io/patientayo/anotifygent:v1.0.1
+  image: daocloud.io/patientayo/anotifygent:v1.0.2
   environment:
     - 'CONFIG=./conf/config.json'  #internal environment
   volumes:
