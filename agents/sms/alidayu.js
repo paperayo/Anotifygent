@@ -42,6 +42,18 @@ var sendSms = function(agent_auth, agent_params, callback) {
 
 				return callback(send_err);
 
+			} else if (/^(isp)\..*/.test(error["sub_code"])) {
+				console.log(response);
+				send_err.err_code = 102;
+				if (error["sub_code"] === "isp.null-pointer-exception" ||
+					error["sub_code"] === "isp.top-parse-error" ||
+					error["sub_code"] === "isp.top-mapping-parse-error") {
+					send_err.err_code = 100;
+				}
+				send_err.err_message = "sms server error.";
+
+				return callback(send_err);
+				
 			} else {
 				console.log(error);
 				// inform admin the error message

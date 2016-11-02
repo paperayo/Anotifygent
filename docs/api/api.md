@@ -69,3 +69,4 @@ err_code           | explanation
 3                  | get template error
 100                | Sms server error
 101                | sending sms verification_code too frequently, allowed 1 sms/m 7 sms/h, or sending sms notification too frequently, allowed 50 sms/d
+102                | sms_server handle failed, you can retry to request
