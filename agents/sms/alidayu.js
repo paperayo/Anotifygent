@@ -42,7 +42,7 @@ var sendSms = function(agent_auth, agent_params, callback) {
 
 				return callback(send_err);
 
-			} else if (/^(isp)\..*/.test(error["sub_code"])) {
+			} else if (/^(isp)\..*/.test(error["sub_code"]) || error["name"] === "NetWork-Error") {
 				console.log(response);
 				send_err.err_code = 102;
 				if (error["sub_code"] === "isp.null-pointer-exception" ||
