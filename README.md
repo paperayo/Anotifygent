@@ -69,7 +69,7 @@ edit <a href="#config.example.json">config.example.json</a> and copy as config.j
 
 ## Docker
 - **daocloud repository**  
-[click here](https://hub.daocloud.io/repos/da8d743c-ff63-4be2-b60d-22cdc18d510c)
+[click here](http://hub.daocloud.io/repos/4c00237e-967d-4cb3-b4f1-f91293adc98c)
 - **docker-compose.yml**
 ```yaml
 anotifygent:
