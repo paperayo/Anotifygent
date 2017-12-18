@@ -1,7 +1,7 @@
 # Anotifygent
 Anotifygent , a Restful notifying(sms/email/more) agent server using communication-platforms/SMTP/more as backend(such as [alidayu](https://www.alidayu.com)), aims to integrate 'notifying' services, and reduce the degree of coupling between apps/webUI and those platforms by providing a **simple** and **app-careless** [API](./docs/api/api.md), so that you just need to suit the layer we defined even if the intefaces of those platforms changed, see below and edit <a href="#config.example.json">config.example.json</a> to get started ...
 
-<h2>API</h2>
+## API ##
 see [here](./docs/api/api.md) to check APIs.
 
 ## First of all
@@ -13,6 +13,7 @@ edit <a href="#config.example.json">config.example.json</a> and copy as config.j
 ### Terms
 
 <h3 id = "config.example.json">config.example.json</h3>
+
 ```javascript
 {
     "notify_auth": {
